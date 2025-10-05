@@ -1,0 +1,10 @@
+{
+	"Python": [".py", ".pyw", ".pyi"],
+	"Java": [".java"],
+	"C++": [".cpp", ".cc", ".cxx", ".hpp", ".h", ".hxx"],
+	"Groovy": [".groovy", ".gvy", ".gy", ".gsh"],
+	"JavaScript": [".js", ".jsx", ".ts", ".tsx"],
+	"XML": [".xml", ".xsd", ".xsl", ".xslt"],
+	"JSON": [".json"],
+	"YAML": [".yaml", ".yml"]
+}

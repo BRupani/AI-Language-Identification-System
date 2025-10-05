@@ -29,24 +29,24 @@ A system for identifying programming languages in source code files using machin
 ### Training the Model
 
 ```bash
-python predict_lang.py --train --train-dir file
+python ai_predict_lang.py --train --train-dir file
 ```
 
 ### Predicting Language (CLI)
 
 Single file:
 ```bash
-python predict_lang.py --file path/to/file.txt
+python ai_predict_lang.py --file path/to/file.txt
 ```
 
 Directory (batch) prediction:
 ```bash
-python predict_lang.py --dir path/to/directory/
+python ai_predict_lang.py --dir path/to/directory/
 ```
 
 Show top-k predictions:
 ```bash
-python predict_lang.py --file path/to/file.txt --top-k 3
+python ai_predict_lang.py --file path/to/file.txt --top-k 3
 ```
 
 Other options:
@@ -62,7 +62,6 @@ Other options:
 The new implementation uses:
 - HashingVectorizer with character n-grams (1-3) for feature extraction
 - SGDClassifier (logistic regression) with balanced class weights
-- Smart resampling: majority classes capped at 500, minority classes oversampled to 200
 - Lightweight, language-specific features (keywords, syntax markers, comment styles)
 - Efficient memory usage and fast inference
 
@@ -73,12 +72,6 @@ The implementation is optimized for:
 - 512MB RAM
 - Local file storage
 - Processing > 4 files/second
-
-### Class Imbalance Handling
-
-- Smart resampling for balanced training
-- Class weights in the classifier
-- Maintains prediction accuracy across all supported languages
 
 ## Results
 
@@ -119,4 +112,5 @@ The implementation is optimized for:
    - Better handling of mixed-language files
    - Improved error handling and logging
    - API for integration with other tools
+
 
